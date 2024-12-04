@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_nav.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCrg-oEqxAbHxqNAqxHLKDuFQklyQrtk8" async defer></script> -->
+    
+    <script src="ownercar.js" defer></script>
+    <script src="custview.js" defer></script>
+</head>
+<body>
+    <style>
+        #usercards {
+            display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); 
+    gap: 15px;
+    }
+    
+    .card {
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+    
+    .carpic {
+        width: 100%;
+        height: auto;
+        max-width: 200px; /* Set a max width for images */
+        max-height: 150px; /* Set a max height for images */
+        object-fit: cover; /* Ensures the image covers the space while maintaining its aspect ratio */
+        border-radius: 8px;
+    }
+    
+    .card-title {
+        font-size: 1.25em;
+        margin-bottom: 10px;
+    }
+    
+    .rating i {
+        color: #f39c12;
+    }
+    .btn {
+        padding: 10px 10px;
+    margin-top: 10px;
+    width: 85px;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+    }
+    </style>
+    
+    
+    
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancel"></i>
+        </label>
+        <img src="logo1.png" alt="Safar Logo">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="track.html">Bookings</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            
+
+
+        </ul>
+    </nav>
+
+    
+
+
+    <div class="container">
+        
+        <h1>Hi,Udita!</h1>
+       
+        <h2>Choose your best suit</h2>
+        <div class="box" id="vehicleCards"></div>
+        <div class="box" id="usercards"></div>
+
+        
+        
+
+        <!-- code for fare calculation after selecting vehicle -->
+        <div class="wrapper">
+
+            <div class="outer-square">
+                <div class="card1">
+                    <h3 class="bill">Billing Details</h3>
+                    
+                    <form>
+                        <label for="from">From</label>
+                        <input type="text" id="from-location" readonly>
+                        <label for="to">To</label>
+                        <input type="text" id="to-location" readonly>
+                        <label for="distance">Distance (in km)</label>
+                        <input type="number" id="distance" placeholder="Calculated based on locations" readonly>
+                        <button type="button" id="calculate-distance-btn">Calculate Distance</button>
+
+                        <label for="base-fare">Base Rent (&#8377)</label>
+                        <input type="number" id="base-fare" placeholder="500" readonly>
+                        <label for="discount">Apply Coupon Code</label>
+                        <input type="text" id="discount">
+                        <label for="total-fare">Total Fare (&#8377)</label>
+                        <input type="number" id="total-fare" placeholder="Final fare" readonly>
+                        <button type="button" id="calculate-fare-btn" disabled>Calculate Fare</button>
+                        <button class="btn" id="next">PROCEED FOR PAYMENT</button>
+                    </form>
+                    
+                </div>
+                <script src="js/distance.js"></script>
+                <!-- <script src="js/totalFare.js"></script> -->
+                <script src="js/billing.js"></script>
+                
+
+                
+                
+                    
+                
+                
+                <div class="card2">
+                    <!-- <img src="./booking.png" width="500px" height="500px" alt="book-car"> -->
+                     <img src="./offers.png" height="300px" alt="offer">
+                     <p>
+                        Apply code <b>MYFIRST</b> on your first booking to get a discount of 20%. <br><br>
+                        Apply code <b>JOURNEY</b> on your booking above Rs.999 to get a discount of 25%. <br><br>
+                        Apply code <b>TRIP</b> on your booking  above Rs.1999 to get a discount of 30%.
+
+                     </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Add this section after the Billing Details -->
+    <!-- <div class="my-bookings" id="bookings">
+        <h3 class="booking-title">My Bookings</h3>
+        <div class="booking-list">
+            
+            <div class="booking-item" data-booking-id="12345">
+                <p><strong>Booking ID:</strong> #12345</p>
+                <p><strong>Vehicle:</strong> Swift D'zire</p>
+                <p><strong>Price:</strong> &#8377;500</p>
+                <p><strong>Duration:</strong> 3 hours</p>
+                <button class="cancel-booking-btn" onclick="cancelBooking('12345')">Cancel Booking</button>
+            </div>
+            
+            <div class="booking-item" data-booking-id="123456">
+                <p><strong>Booking ID:</strong> #123456</p>
+                <p><strong>Vehicle:</strong> Swift D'zire</p>
+                <p><strong>Price:</strong> &#8377;500</p>
+                <p><strong>Duration:</strong> 3 hours</p>
+                <button class="cancel-booking-btn" onclick="cancelBooking('123456')">Cancel Booking</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function cancelBooking(bookingId) {
+        
+        if (confirm("Are you sure you want to cancel this booking?")) {
+            
+            var bookingItem = document.querySelector(`.booking-item[data-booking-id='${bookingId}']`);
+            
+            if (bookingItem) {
+                bookingItem.remove();
+                
+            
+                var bookingList = document.querySelector('.booking-list');
+                if (bookingList.children.length === 0) {
+                    document.querySelector('.my-bookings').innerHTML = "<p style='color:white;'>No bookings available.</p>";
+                    
+                }
+            } else {
+                console.error('Booking item not found.');
+            }
+        }
+    }
+        
+
+    </script> -->
+    
+
+
+    <div class="form-container" id="feedback">
+        <h2 class="ff">Feedback Form</h2>
+        <form>
+            <!-- Name field -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <!-- Email field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Rating field -->
+            <label for="rating">Rate your experience:</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" title="5 stars">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="4 stars">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="3 stars">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="2 stars">★</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="1 star">★</label>
+            </div>
+
+            <!-- Feedback field -->
+            <label for="experience">How was your experience?</label>
+            <textarea id="experience" name="experience" placeholder="Share your experience" rows="4" required></textarea>
+
+            <!-- Submit button -->
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    <script src="../assets/feedbackcust.js"></script>
+    <script>
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").classList.add("sidebar-open");
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").classList.remove("sidebar-open");
+        }
+    </script>
+</body>
+</html>

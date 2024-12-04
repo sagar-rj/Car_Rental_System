@@ -1,0 +1,109 @@
+.last-month-earnings{
+    position:absolute;
+
+}
+
+#amount{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    left:700px;
+    top:50px;
+}
+
+.per-trip-earning{
+    position: relative;
+    top:130px;
+    padding-left: 20px;
+    background-color: rgb(155, 151, 151);
+    overflow:auto;
+}
+
+
+
+
+
+.trip-one{
+    position: relative;
+    background-color: #ffffff;
+    width:600px;
+    border-radius: 50px;
+    height:100px;
+    left: 50px;
+    top:20px;
+}
+
+.trip-one-one{
+    position: relative;
+    background-color:rgb(55, 51, 51);
+    border-radius: 30px;
+    width:230px;
+    height:60px;
+    text-align: center;
+    top:17px;
+    left:10px;
+    color:white
+}
+
+h6{
+    position: relative;
+    top:17px;
+}
+
+.amount{
+    position: relative;
+    border-radius: 10px;
+    background-color: greenyellow;
+    width:80px;
+    height:40px;
+    left:300px;
+    text-align: center;
+    bottom:30px;
+    
+}
+
+.trip-one button{
+    position:absolute;
+    border-radius: 20px;
+    top:25px;
+    left:470px;
+    color:red;
+    width:100px;
+    height: 50px;
+    
+    
+}
+
+.two{
+    position: relative;
+    left: 850px;
+    top:-75px;
+}
+
+.two button{
+    position:relative;
+    top: -72px;
+}
+
+.four{
+    position:relative;
+    left:950px;
+    top:-85px;
+    left:850px;
+}
+
+.three button{
+    position:relative;
+    top: -72px;
+}
+
+.four button{
+    position:relative;
+    top: -72px;
+}
+.three{
+    position: relative;
+    left: 50px;
+    top:5px;
+
+}

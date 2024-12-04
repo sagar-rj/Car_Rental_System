@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+        }
+        .customer-car-image{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="customer-car-image">
+        <img id="displayedImage2" src="" alt="uploaded Image">
+        <img id="displayedImage3" src="" alt="uploaded Image">
+        <img id="displayedImage4" src="" alt="uploaded Image">
+        <img id="displayedImage5" src="" alt="uploaded Image">
+        <img id="displayedImage6" src="" alt="uploaded Image">
+        <img id="displayedImage7" src="" alt="uploaded Image">
+        <img id="displayedImage8" src="" alt="uploaded Image">
+        <img id="displayedImage9" src="" alt="uploaded Image">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            for (let i = 2; i <= 9; i++) {
+                const imageData = localStorage.getItem(`uploadedImage${i}`);
+                if (imageData) {
+                    document.getElementById(`displayedImage${i}`).src = imageData;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

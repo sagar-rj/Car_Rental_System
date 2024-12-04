@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.details-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.details-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.detail-item span {
+  font-weight: bold;
+}

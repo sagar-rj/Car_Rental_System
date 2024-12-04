@@ -1,0 +1,148 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #fafafa, #dae2ee, #aecede, #7ebbc3, #5aa79a);
+    color: #333;
+}
+
+/* Payment container styling */
+.payment-container {
+    max-width: 30%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 4px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Booking summary styling */
+.booking-summary {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.booking-summary p {
+    margin: 12px 0;
+}
+
+/* Payment method selection */
+.payment-methods {
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-option input {
+    margin-right: 10px;
+    accent-color: rgb(41, 41, 195); /* For modern browsers */
+}
+
+/* Form styling */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form-section {
+    margin-bottom: 25px;
+}
+
+.payment-form label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+    display: block; /* Ensures labels take up full width */
+}
+
+.payment-form input {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%; /* Ensures inputs take up full width */
+}
+
+.payment-form button {
+    padding: 15px;
+    background-color: rgb(111, 168, 204);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.payment-form button:hover {
+    background-color: darkblue;
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .payment-container {
+        max-width: 60%;
+        padding: 20px;
+    }
+
+    .payment-form {
+        flex-direction: column;
+    }
+
+    .payment-form-section {
+        margin-bottom: 20px;
+    }
+
+    .payment-form input {
+        padding: 10px;
+    }
+
+    .payment-form button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-container {
+        max-width: 70%;
+        padding: 15px;
+    }
+
+    .booking-summary, .payment-methods, .payment-form-section {
+        font-size: 14px;
+    }
+
+    .payment-form input {
+        padding: 8px;
+    }
+
+    .payment-form button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

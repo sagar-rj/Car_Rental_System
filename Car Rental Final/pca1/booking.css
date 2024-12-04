@@ -1,0 +1,57 @@
+/* Styling for My Bookings Section */
+.my-bookings {
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    margin-top: 20px;
+}
+
+.booking-title {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-item {
+    background: rgba(255, 255, 255, 0.2); /* semi-transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* subtle shadow */
+    color: white;
+}
+
+.booking-item p {
+    margin-bottom: 10px;
+}
+
+.cancel-booking-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF4D4D; /* Red color for cancel button */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-booking-btn:hover {
+    background-color: #FF2D2D; /* Darker red on hover */
+}
+
+@media (max-width: 768px) {
+    .my-bookings {
+        padding: 15px;
+    }
+
+    .booking-title {
+        font-size: 24px;
+    }
+}

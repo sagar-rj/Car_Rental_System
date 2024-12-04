@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2{
+          background-color: green;
+          padding: 15px 15px;
+        }
+        .details-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .details-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .detail-item {
+            margin-bottom: 10px;
+        }
+
+        .detail-item span {
+            font-weight: bold;
+        }
+        #cancel-button, #download-receipt {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cancel-button {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+        #cancel-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #download-receipt {
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="details-container">
+        <h2>Payment Details</h2>
+        <div id="car-details" class="detail-item"></div>
+        <div id="billing-details" class="detail-item"></div>
+        <button id="cancel-button">Cancel Booking</button>
+        <button id="download-receipt">Download Receipt</button>
+        <p id="status-message"></p>
+    </div>
+    <script>
+        const cancelButton = document.getElementById('cancel-button');
+        const statusMessage = document.getElementById('status-message');
+        const downloadButton = document.getElementById('download-receipt');
+
+        // Set a timeout of 1 minute (60000 milliseconds)
+        const cancelTimeout = setTimeout(() => {
+            cancelButton.disabled = true;
+            statusMessage.textContent = "The cancellation window has expired.";
+            statusMessage.style.color = "red";
+        }, 10000);
+
+        // Add an event listener to the cancel button
+        cancelButton.addEventListener('click', () => {
+            // Clear the timeout if the button is clicked
+            clearTimeout(cancelTimeout);
+            cancelButton.disabled = true; // Disable the button after cancel
+            statusMessage.textContent = "Your booking has been successfully cancelled.";
+            statusMessage.style.color = "green";
+
+            // Simulate cancellation action (e.g., send request to the server)
+            console.log("Booking cancelled successfully.");
+        });
+        
+            // Add an event listener to the download button
+            downloadButton.addEventListener('click', () => {
+            const carDetails = document.getElementById('car-details').textContent;
+            const billingDetails = document.getElementById('billing-details').textContent;
+
+            // Create a string for the receipt
+            const receiptContent = `
+                Payment Receipt
+                ---------------------------
+                ${carDetails}
+                ${billingDetails}
+                ---------------------------
+                Thank you for booking with us!
+            `;
+
+            // Create a blob object
+            const blob = new Blob([receiptContent], { type: 'text/plain' });
+
+            // Create a link element
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'receipt.txt';
+
+            // Trigger the download
+            link.click();
+
+            // Clean up the URL object
+            URL.revokeObjectURL(link.href);
+       
+        });
+    </script>
+    <script src="track.js"></script>
+</body>
+</html>

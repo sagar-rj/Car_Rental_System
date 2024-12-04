@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(44, 62, 80);
+}
+#sign-box{
+    width: 90%;
+    max-width: 450px;
+    height: 300px;
+    margin: 200px auto 200px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
+#signed img{
+    height: 180px;
+    width: 220px;
+    margin-top: -100px;
+    margin-bottom: 50px;
+}
+
+#sign-heading{
+    color: rgb(4, 207, 4);
+    font-size: 35px;
+}
+
+    </style>
+</head>
+<body>
+<div id="sign-box">
+    <div id="signed">
+        <img src="tick.png" alt="">
+        <h1 id="sign-heading">Signed Up Successfully</h1>
+    </div>
+
+</div>
+   <script>
+    setTimeout(() => {
+        window.location.href = "Login.html"
+    },2000)
+   </script>
+</body>
+</html>

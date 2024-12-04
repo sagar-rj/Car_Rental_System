@@ -1,0 +1,35 @@
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    padding:15px;
+    text-align: center ;
+}
+
+ul{
+    text-align: justify;
+}
+
+img{
+    width:80px;
+    height: auto;
+    padding: 10px;
+
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+h5{
+    padding:10px;
+}
+
+footer{
+    background-color: black;
+    color:white;
+    overflow: visible;
+    height: 228px;
+}

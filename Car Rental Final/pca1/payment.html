@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Payment Details</h1>
+        <div class="booking-summary">
+            <h2>Booking Summary</h2>
+            <p><strong>Vehicle:</strong> <span id="vehicle-model">Loading...</span></p>
+
+            <!-- <p><strong>Price:</strong> &#8377;500</p> -->
+            <!-- <p><strong>Duration:</strong> 3 hours</p> -->
+            <p><strong>Total Amount:</strong> &#8377;<span class="total-amount">0</span></p> <!-- Placeholder to be updated -->
+
+            <!-- <p><strong>Total Amount:</strong> &#8377;500</p> -->
+        </div>
+
+        <script src="js/distance.js"></script>
+        <script>
+            // Fetch the total fare from sessionStorage and update the fields
+            const totalFare = sessionStorage.getItem("totalFare");
+        
+            if (totalFare) {
+                // document.querySelector('.price').textContent = totalFare;
+                document.querySelector('.total-amount').textContent = totalFare;
+            }
+        </script>
+
+        <!-- Payment Method Selection -->
+        <div class="payment-methods">
+            <h2>Select Payment Method</h2>
+            <div class="payment-option">
+                <input type="radio" id="card" name="payment-method" value="card" checked>
+                <label for="card">Credit/Debit Card</label>
+            </div>
+            <div class="payment-option">
+                <input type="radio" id="upi" name="payment-method" value="upi">
+                <label for="upi">UPI</label>
+            </div>
+        </div>
+
+        
+
+        <!-- Payment Form -->
+        <form id="payment-form" class="payment-form">
+                <!-- Card Payment Form -->
+                <div class="payment-form-section" id="card-form">
+                                <h2>Enter Card Information</h2>
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" placeholder="Udita Sinha">
+
+                                <label for="card-number">Card Number:</label>
+                                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+
+                                <label for="expiry-date">Expiry Date:</label>
+                                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123">
+                </div>
+
+                <!-- UPI Payment Form -->
+                <div class="payment-form-section" id="upi-form" style="display: none;">
+                    <h2>Enter UPI Information</h2>
+                    <label for="upi-id">UPI ID:</label>
+                    <input type="text" id="upi-id" name="upi-id" placeholder="example@upi">
+                </div>
+
+                <button type="submit">Pay Now</button>
+        </form>
+
+    </div>
+    <script src="js/payment.js" defer></script>
+
+    <script>
+        // JavaScript to toggle between payment forms
+        document.querySelectorAll('input[name="payment-method"]').forEach((elem) => {
+            elem.addEventListener("change", function() {
+                if (this.value === "card") {
+                    document.getElementById("card-form").style.display = "block";
+                    document.getElementById("upi-form").style.display = "none";
+                } else {
+                    document.getElementById("card-form").style.display = "none";
+                    document.getElementById("upi-form").style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

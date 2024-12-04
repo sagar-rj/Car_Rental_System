@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylenav.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    .btn1:hover {
+      background-color: rgb(255, 140, 0) !important;
+    }
+    body {
+      overflow-x: hidden;
+    }
+  </style>
+  <body>
+
+    <!---Navbar----->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancel"></i>
+        </label>
+        <img src="img/logo1.png" alt="Safar Logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="#cars">
+                CARS
+                </a>
+              </li>
+            <li><a href="#about">About</a></li>
+            <!-- <li><a href="#feedback">Feedback</a></li> -->
+            <!-- <li><a href="signpage.html" class="signup-button">Sign Up</a></li> -->
+            <li><a href="logout.html" class="login-button">Log Out</a></li>
+        </ul>
+        
+    </nav>
+    <!---Navbar----->
+
+    <!-- ----HOME----- -->
+    <section id="home">
+      <h2 id="heading" style="position: relative; left: 10%;"></h2>
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/p2.jpg"
+              class="d-block w-30"
+              alt="..."
+              style="position: relative; left: 10%"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/p2.jpg"
+              class="d-block w-30"
+              alt="..."
+              style="position: relative; left: 10%"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/p2.jpg"
+              class="d-block w-30"
+              alt="..."
+              style="position: relative; left: 10%"
+            />
+          </div>
+        </div>
+        <button
+          class="cbtn carousel-control-prev"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        ></button>
+        <button
+          class="cbtn carousel-control-next"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        ></button>
+      </div>
+    </section>
+    <!-- ----HOME----- -->
+
+    <!-- ------CARS------- -->
+    <section id="cars">
+      <div class="container mt-5">
+        <h2 style="font-size: 3.5rem; color: rgb(248, 126, 56)">
+          Your Listed Cars:
+        </h2>
+        <p class="tag">(Your Cars, with our Safety...)</p>
+        <div class="addremove">
+          <button
+            class="btn btn-success"
+            data-toggle="modal"
+            data-target="#addCarModal"
+          >
+            Add Car
+          </button>
+          <button class="btnR btn btn-secondary">Remove Car</button>
+        </div>
+        <div class="modal fade" id="addCarModal" tabindex="-1" role="dialog" aria-labelledby="addCarModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="addCarModalLabel">Add Car</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="addCarForm">
+                        <div class="form-group">
+                          <label for="carImage">Car Image:</label>
+                          <input type="file" class="form-control" id="carImage" />
+                        </div>
+                          <div class="form-group">
+                              <label for="carName">Car Name:</label>
+                              <input type="text" class="form-control" id="carName" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="carBrand">Car Brand:</label>
+                              <input type="text" class="form-control" id="carBrand" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="carType">Car Type:</label>
+                              <input type="text" class="form-control" id="carType" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="carTransmission">Car Transmission:</label>
+                              <select class="form-control" id="carTransmission">
+                                  <option value="automatic">Automatic</option>
+                                  <option value="manual">Manual</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="carColor">Car Color:</label>
+                              <input type="text" class="form-control" id="carColor" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="carModelYear">Car Model Year:</label>
+                              <input type="number" class="form-control" id="carModelYear" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="carPrice">Car Price:</label>
+                              <input type="text" class="form-control" id="carPrice" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="carDescription">Car Description:</label>
+                              <textarea class="form-control" id="carDescription" rows="3"></textarea>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="addCarButton">Add Car</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="1">
+              <div class="card-body">
+                <h5 class="card-title">Car 1</h5>
+                
+                <img class="carpic" src="img/car1.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="2">
+              <div class="card-body">
+                <h5 class="card-title">Car 2</h5>
+                <img class="carpic" src="img/car2.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="3">
+              <div class="card-body">
+                <h5 class="card-title">Car 3</h5>
+                <img class="carpic" src="img/car3.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="4">
+              <div class="card-body">
+                <h5 class="card-title">Car 4</h5>
+                <img class="carpic" src="img/car4.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="5">
+              <div class="card-body">
+                <h5 class="card-title">Car 5</h5>
+                <img class="carpic" src="img/car5.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="6">
+              <div class="card-body">
+                <h5 class="card-title">Car 6</h5>
+                <img class="carpic" src="img/car6.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="7">
+              <div class="card-body">
+                <h5 class="card-title">Car 7</h5>
+                <img class="carpic" src="img/car7.jpg" alt="" />
+                <p class="card-text">Rs. 769 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Petrol</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <input type="checkbox" class="delete-checkbox" data-car-id="8">
+              <div class="card-body">
+                <h5 class="card-title">Car 8</h5>
+                <img class="carpic" src="img/car1.jpg" alt="" />
+                <p class="card-text">Rs. 448 per hr</p>
+                <div class="rating">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <p class="card-text">Good Deal, Excellent, Diesel</p>
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#freeReportModal">Free Report</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="freeReportModal" tabindex="-1" role="dialog" aria-labelledby="freeReportModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="freeReportModalLabel">Free Report</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>   
+        
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="documents">Documents:</label>
+                                <textarea class="form-control" id="documents" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary" id="updateDocumentsButton">Update Documents</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <script src="addCars.js"></script>
+    <!-- ------CARS------- -->
+
+    <!-- ---------------About-------------- -->
+    <footer class="footer" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mt-5">
+            <h4 class="text-center">About Us</h4>
+            <p>
+              Welcome to SAFAR, where we bring the road to your doorstep with
+              style, convenience, and unparalleled service. Our journey began
+              with a shared passion for travel and a vision to take exploring
+              the world more accessible and exciting. Founded by a team of
+              dedicated and enthusiastic individuals Sujal, Udita, Sagar and
+              Amit - we are committed to providing you with the ultimate car
+              rental experience.
+            </p>
+          </div>
+
+          <div class="col-md-4 mt-5">
+            <h4 class="text-center">Meet Our Team</h4>
+            <ul>
+              <li>
+                Udita: Our customer service superstar, Udita is dedicated to
+                making your experience smooth and enjoyable, ready to axsist
+                with any questions you might have.
+              </li>
+              <li>
+                Sagar: 5-star Rated Driver, Sagar's knowledge of cars and the
+                industry ensures that we offer the best vehicles for your
+                journeys
+              </li>
+              <li>
+                Sujal: The tech genius behind the scenes, Sujal, Manager of
+                SAFAR makes sure our website and booking system are user
+                friendly and efficient.
+              </li>
+              <li>
+                Amit: Amit, Car Owner brings his passion for travel and business
+                acumen to the team, striving to make SAFAR a leader in the
+                Industry.
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 mt-5">
+            <h4 class="text-center">Our Mission</h4>
+            <p>
+              At SAFAR, we aim to revolutionize the way you explore and
+              experience new destinations. Our mission is to offer top-quality
+              car rentals that fit your budget, provide exceptional customer
+              service, and ensure your road trips are memorable and worry-free
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Mobile App Available on</h4>
+            <div class="app-icons">
+              <img
+                src="img/app-store.png"
+                alt="App Store"
+                style="height: 40px"
+              />
+              <img
+                src="img/play-store.png"
+                alt="Play Store"
+                style="height: 40px"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6 text-center mb-5">
+            <h4 class="text-center">Connect with us:</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/"
+                ><img src="img/icons8-facebook.svg" alt=""
+              /></a>
+              <a href="https://x.com/?lang=en"
+                ><img src="img/icons8-twitter.svg" alt=""
+              /></a>
+              <a
+                href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=ARpgrqf2ylxKhisPeFmy1431aqYIgM4oEzJ7Rs-fD2SDGExr2WAMujwEx_jFMSs4qMWrh0GP7OyH&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S422750934%3A1728718069227462&ddm=0"
+                ><img src="img/icons8-google.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ---------------------About-------------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      let x = prompt("Enter your name");
+      let y = document.getElementById("heading");
+      y.innerHTML = "Welcome back, " + x;
+
+      $(document).ready(function() {
+    $("#addCarButton").click(function() {
+        var carName = $("#carName").val();
+        var carImage = $("#carImage").val();
+        var carPrice = $("#carPrice").val();
+        var carBrand = $("#carBrand").val();
+        var carType = $("#carType").val();
+        var carTransmission = $("#carTransmission").val();
+        var carColor = $("#carColor").val();
+        var carModelYear = $("#carModelYear").val();
+        var carDescription = $("#carDescription").val();
+
+        // Create a new card element with additional details
+        var newCard = $(
+            '<div class="col-md-6"><div class="card mb-3"><div class="card-body"><h5>' + carName + '</h5><img class="carpic" src="' + carImage + '" alt="" /><p class="card-text">Rs. ' + carPrice + ' per hr</p><p class="card-text">Brand: ' + carBrand + '</p><p class="card-text">Type: ' + carType + '</p><p class="card-text">Transmission: ' + carTransmission + '</p><p class="card-text">Color: ' + carColor + '</p><p class="card-text">Model Year: ' + carModelYear + '</p><p class="card-text">Description: ' + carDescription + '</p></div></div></div>'
+        );
+
+        $(".row").append(newCard);
+
+        // Close the modal
+        $("#addCarModal").modal("hide");
+    });
+
+        // Remove Car functionality
+        $(document).ready(function () {
+          $(".btnR").click(function () {
+            var selectedCars = $(".delete-checkbox:checked");
+            if (selectedCars.length > 0) {
+              if (
+                confirm("Are you sure you want to delete the selected cars?")
+              ) {
+                selectedCars.each(function () {
+                  var carId = $(this).data("car-id");
+                  // Perform any necessary actions with the car ID (e.g., remove from database)
+                  $(this).closest(".col-md-6").remove();
+                });
+              }
+            } else {
+              alert("Please select at least one car to delete.");
+            }
+          });
+        });
+      });
+
+
+      $(document).ready(function() {
+    $('#updateDocumentsButton').click(function() {
+        var documents = $('#documents').val();
+        // Replace '1' with the actual car ID
+        var carId = 1;
+
+        // Update the documents for the specified car (e.g., send a request to a server)
+        $.ajax({
+            url: '/update-car-documents', // Replace with your server endpoint
+            type: 'POST',
+            data: { carId: carId, documents: documents },
+            success: function() {
+                alert('Documents updated successfully!');
+                $('#freeReportModal').modal('hide');
+            },
+            error: function() {
+                alert('Error updating documents.');
+            }
+        });
+    });
+});
+    </script>
+  </body>
+</html>

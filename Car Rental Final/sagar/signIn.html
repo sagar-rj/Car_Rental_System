@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style-signIn.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <div>
+                    <h1>Sign Up</h1>
+                </div>
+                <div>
+                    <p class="login">Already have an account?<a  href="./login.html">  Log in</a> </p>
+                </div>
+                <div>
+                    <form id="signupform">
+
+                        <label for="firstname">First Name</label><br><br>
+                        <input type="text" id="firstName" class="fill" required><br><br>
+
+                        <label for="lastName">Last Name</label><br><br>
+                        <input type="text" id="lastName" class="fill" required><br><br>
+
+                        <label for="email">Email</label><br><br>
+                        <input type="email" id="email" class="fill" required ><br><br>
+
+                        <label for="password">Password</label><br><br>
+                        <input type="password" id="password" class="fill" required><br><br>
+
+                        <button id="btn" type="submit">Sign Up</button>
+                    </form>
+                    <p id="invalid"></p>
+                </div>
+                <div>
+                    <p>By signing up you agree to our <a href="#">Terms of Service</a></p>
+                    <p>and <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./signIn-script.js"></script>
+</body>
+
+</html>

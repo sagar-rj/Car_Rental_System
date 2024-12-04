@@ -1,0 +1,109 @@
+.side-bar {
+  position: absolute;
+  background-color: #0c0c0c8a;
+  color: #f7f7f160;
+  margin: 0;
+  padding: 8px;
+  width: 300px;
+  height: 100%;
+  overflow:auto;
+  border-radius: 10px;
+}
+
+.container {
+  position: absolute;
+  width: 300px;
+}
+.nav-link {
+  color: white;
+}
+
+.active1 {
+  color: grey;
+  border-radius: 5px;
+}
+
+.second-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 300px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  width: 610px;
+  height: 70px;
+}
+.second-nav2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left:300px;
+  padding: 10px;
+  background-color: #2c2b2b8a;
+  border-radius: 10px;
+  width: 600px;
+  height: 70px;
+}
+
+
+.trips-info {
+  position: relative;
+  display: flex;
+  justify-content:flex-start;
+  left:310px;
+  padding: 10px;
+  background-color:rgb(38, 196, 18);
+  border-radius: 10px;
+  width:79%;
+  height:120px;
+  bottom:30px;
+  color: black;
+}
+
+.trips-info ul{
+  list-style-type: none;
+
+}
+
+.favorite-styled{
+border-radius: 30px;
+position: relative;
+left:1220px;
+bottom:128px;
+height: 80px;
+width:200px;
+color: rgb(38, 196, 18);
+border-color:white ;
+
+}
+.next-info{
+  bottom:200px;
+}
+
+
+.next-info1{
+  bottom:100px;
+}
+
+.next-info2{
+  bottom:169px;
+}
+
+.next-info3{
+  bottom:265px;
+}
+
+.next-info4{
+  bottom:236px;
+}
+
+.next-info5{
+  bottom:335px;
+}
+
+a{
+  color: white;
+  text-decoration:none;
+}
+

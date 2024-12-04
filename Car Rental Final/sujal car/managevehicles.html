@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager</title>
+    <link rel="stylesheet" href="managevechicles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+  
+<body>
+    <nav>
+        <div class="navbar">
+            <img class="logo" src="logo1.png" alt="Safar Logo">
+            <div class="manager-name">
+                <p>Sujal Yadav</p>
+                <img class="manager-photo" src="manager-photo.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="sidebar">
+            <ul class="side-ul">
+                <li class="Li"><span class="material-symbols-outlined">
+                        bar_chart_4_bars</span>
+                    <a href="manager.html">Dashboard</a>
+                </li>
+                <li class="active" class="Li"><span class="material-symbols-outlined">
+                        manage_accounts</span>
+                    <a href="#">Manage Vehicles</a>
+                </li>
+                <!-- <li class="Li"><span class="material-symbols-outlined">
+                        book_online</span>
+                    <a href="reservation.html">Reservations</a>
+                </li> -->
+                <li class="Li"><span class="material-symbols-outlined">
+                        support_agent</span>
+                    <a href="customers.html">Customers</a>
+                </li>
+                <li class="Li"><span class="material-symbols-outlined">
+                        flag</span>
+                    <a href="reports.html">Reports</a>
+                </li>
+                <li class="Li"><span class="material-symbols-outlined">
+                    receipt_long</span>
+                <a href="generatebills.html">Generate Bills</a>
+            </li>
+                
+                <li class="Li"><span class="material-symbols-outlined">
+                        logout</span>
+                    <a href="logout.html">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <div id="manage-vehicles" class="content-section">
+
+                <!-- Add Vehicle Form -->
+                <div class="add-vehicle-form">
+                    <h1>Add a New Vehicle</h1>
+                    <form id="vehicleForm">
+                        <input type="text" id="vehicleModel" placeholder="Vehicle Model" required>
+                        <!-- <input type="text" id="vehicleCondition" placeholder="Condition (Good, Fair, Poor)" required> -->
+                        <!-- <input type="date" id="lastMaintenance" placeholder="Last Maintenance Date" required> -->
+                        <input type="number" id="price" placeholder="500" required>
+                        <input type="text" id="ac" placeholder="AC/Non AC" required>
+                        <input type="text" id="seater" placeholder="04" required>
+                        <input type="file" id="vehicleImage" accept="image/*" required>
+                        <button type="submit">Add Vehicle</button>
+                    </form>
+                </div>
+
+                <!-- Vehicle List Table -->
+                <div class="vehicle-list">
+                    <h2>Vehicles in Fleet</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Model</th>
+                                <!-- <th>Condition</th> -->
+                                <!-- <th>Last Maintenance</th> -->
+                                 <th>Base Price</th>
+                                <th>AC/Non-AC</th>
+                                <th>Seater</th>
+                                <th>Image</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vehicleTableBody">
+                            <!-- Dynamic vehicle rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Safar. All rights reserved. Contact us at safar912@gmail.com</p>
+    </footer>
+    <!-- <script src="test.js"></script> -->
+    <script src="managevechicles.js"></script>
+</body>
+
+</html>

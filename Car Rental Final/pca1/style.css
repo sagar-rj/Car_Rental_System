@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    /* height: 100vh; */
+    width: 100%;
+    position: relative;
+    /* background-color: #fff; */
+    background-color: black;
+    overflow-x: hidden;
+}
+
+
+h1{
+    margin-left: 25px;
+    
+        color: white;
+        
+        font-size: 40px;
+      
+
+}
+
+
+.ff{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: navy; */
+    margin-top: 10px;
+    text-shadow: 0 5px 2px rgb(105, 57, 2);
+    /* margin-bottom: 30px; */
+}
+@media screen and (max-width:365px) {
+    h2{
+        font-size: 25px;
+        text-shadow: none;
+        -webkit-text-stroke: 0px;
+        /* -webkit-text-stroke-color: black; */
+        color: black;
+
+
+    }
+    
+}
+.box{
+    margin: 30px 20px;
+    
+}
+
+.container .box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); 
+    gap: 15px;
+}
+
+
+.card{
+    /* background-image: linear-gradient(to left bottom, #f3e09e, #f9ce97, #fabc95, #f6ac98, #ed9e9e); */
+    background-color: white;
+    text-align: center;
+    padding: 15px 25px;
+    box-shadow: rgba(127, 127, 139, 0.847) 0px 50px 100px -20px, rgba(97, 103, 91, 0.792) 0px 30px 60px -30px, rgba(112, 151, 190, 0.485) 0px -2px 6px 0px inset;
+    width: 100%;
+    border-radius: 8px 8px;
+    border: 2px solid burlywood;
+    box-shadow: 0 0 4px burlywood, 0 0 8px burlywood, 0 0 8px burlywood, 0 0 12px burlywood;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+p{
+    /* background-color: black; */
+    color: black;
+    width: 100%;
+    
+    
+}
+
+.top {
+    padding-top: 5px;
+}
+.bottom{
+    padding-bottom: 15px;
+}
+
+button{
+    padding: 10px 10px;
+    margin-top: 10px;
+    width: 85px;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* styling form */
+.wrapper{
+    padding:15px 7%;
+  padding-bottom: 20px;
+  /* background-color:steelblue; */
+  background-image: url("https://i.pinimg.com/originals/e9/79/27/e9792750cbbe7787015d1f759f7c743c.jpg");
+  /* background-image: url("https://img.freepik.com/free-vector/gradient-hexagonal-background_23-2148944164.jpg"); */
+  /* background-image: linear-gradient(to right top, #b6a8b0, #b7acba, #b5b1c5, #afb7ce, #a6bed5, #a0c2d7, #9bc7d7, #98cbd6, #97ced4, #98d0d1, #9ad2ce, #9dd4ca); */
+  /* background-image: linear-gradient(to right bottom, #9dc4db, #a4bdd6, #abb6cf, #b0afc6, #b3a9bc); */
+  background-repeat: no-repeat;
+  background-position: center;
+    background-size: cover;
+}
+.outer-square{
+    display: flex;
+  margin: 10px 5px;
+  padding-bottom: 20px;
+   justify-content: space-evenly; 
+  align-items: center;
+}
+
+
+  .card1{
+    flex-basis: 80%;
+    padding: 10px;
+    border-radius: 5px 5px;
+    margin: 25px 20px 30px 20px;
+}
+
+.bill{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 35px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 80%;
+    row-gap: 10px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent white for glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    backdrop-filter: blur(10px); /* frosted glass blur */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* border for glass effect */
+    border-radius: 10px; /* soften corners */
+    color: rgb(202, 223, 241);
+    
+}
+
+label{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+input,textarea{
+    height: 40px;
+    border-radius: 5px 5px;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+.btn{
+    height: 50px;
+    width: 0%;
+    border-radius: 40px 40px;
+    font-size: 15px;
+    background-color: black;
+    color: whitesmoke;
+    transition: 0.2s all ease-in;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(205, 200, 50);
+    color: black;
+    border: 3px solid purple;
+    transition: 0.5s all;
+}
+
+
+  .card2{
+    flex-basis: 20%;
+  width: 600px;
+  margin: 15px 10px 30px 10px;
+  padding: 20px;
+  flex-shrink: 1;
+  background-color: black;
+}
+
+.card2 img{
+    filter: drop-shadow(0 0 0.95rem rgb(212, 134, 16));
+    margin-top: 0;
+}
+.card2 p{
+    font-size: 20px;
+    margin-top: 15px;
+    color: white;
+}
+  
+  @media screen and (max-width:1024px) {
+    .outer-square{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .card1{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  @media screen and (max-width:550px){
+    .card1{
+        width: 100%;
+    }
+    .bill{
+        font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width:1155px) {
+    .card2 img{
+     width: 400px;
+    }
+ }
+
+ @media screen and (max-width:630px) {
+    .card2 img{
+     width:100%;
+     align-items: center;
+    }
+    /* .card2 p{
+        /* display: flex;
+        flex-wrap: wrap; */
+    } 
+ 
+   
+ @media screen and (max-width: 550px) {
+    .card2 p {
+        font-size: 16px; /* Reduce font size for smaller screens */
+        line-height: 1.4; /* Adjust line height to make the text more compact */
+        width: 100%; /* Ensure the paragraph takes the full width of its container */
+        margin: 0 auto; /* Center the paragraph */
+        text-align: justify; /* Justify the text for a cleaner look */
+    }
+
+    .card2 {
+        width: 100%; /* Ensure the card takes the full width of its container */
+        padding: 10px; /* Adjust padding to fit better on smaller screens */
+    }
+    
+    .card2 img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add some space between the image and the paragraph */
+    }
+}
+#next{
+    width: 200px;
+}

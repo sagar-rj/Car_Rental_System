@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager</title>
+    <link rel="stylesheet" href="manager.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <img class="logo" src="logo1.png" alt="Safar Logo">
+            <div class="manager-name">
+                <p>Sujal Yadav</p>
+                <img class="manager-photo" src="manager-photo.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="sidebar">
+            <ul class="side-ul">
+                <li class="active" class="Li"><span class="material-symbols-outlined">
+                        bar_chart_4_bars</span>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="Li"><span class="material-symbols-outlined">
+                        manage_accounts</span>
+                    <a href="managevehicles.html">Manage Vehicles</a>
+                </li>
+                <!-- <li class="Li"><span class="material-symbols-outlined">
+                        book_online</span>
+                    <a href="reservation.html">Reservations</a>
+                </li> -->
+                <li class="Li"><span class="material-symbols-outlined">
+                        support_agent</span>
+                    <a href="customers.html">Customers</a>
+                </li>
+                <li class="Li"><span class="material-symbols-outlined">
+                        flag</span>
+                    <a href="reports.html">Reports</a>
+                </li>
+                <li class="Li"><span class="material-symbols-outlined">
+                    receipt_long</span>
+                <a href="generatebills.html">Generate Bills</a>
+            </li>
+               
+                <li class="Li"><span class="material-symbols-outlined">
+                        logout</span>
+                    <a href="logout.html">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <div class="box1">
+                <div class="boxes">Total Vehicles: 150</div>
+                <div class="boxes">Active Reservations: 45</div>
+                <div class="boxes">Available Vehicles: 95</div>
+                <div class="boxes">Pending Requests: 10</div>
+            </div>
+            <div class="box2">
+                <div class="table-content">
+                    <div>
+                        <h2>Vehicle Status</h2>
+                    </div>
+                    <div>
+                        <table border="1" class="table">
+                            <thead>
+                                <tr>
+                                    <th>Vehicle ID</th>
+                                    <th>Model</th>
+                                    <th>Availability</th>
+                                    <th>Condition</th>
+                                    <th>Last maintanence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>V001</td>
+                                    <td>Mahindar Thar</td>
+                                    <td>Available</td>
+                                    <td>Good</td>
+                                    <td>03.08.2024</td>
+                                </tr>
+
+                                <tr>
+                                    <td>V002</td>
+                                    <td>Mahindar Scorpio</td>
+                                    <td>In Use</td>
+                                    <td>Good</td>
+                                    <td>09.08.2024</td>
+                                </tr>
+
+                                <tr>
+                                    <td>V003</td>
+                                    <td>Swift Dzire</td>
+                                    <td>Available</td>
+                                    <td>Fair</td>
+                                    <td>04.06.2024</td>
+                                </tr>
+
+                                <tr>
+                                    <td>V001</td>
+                                    <td>Maruti Alto</td>
+                                    <td>Maintainence</td>
+                                    <td>Poor</td>
+                                    <td>16.08.2023</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div>
+                    <h2>Recent Reservations</h2>
+                </div>
+                <div>
+                    <p>Udita Sinha - Toyota Fortuner(08.09.2024 to 10.09.2024)</p>
+                    <p>Vishal Singh - Mahindra Thar(08.09.2024 to 11.09.2024)</p>
+                </div>
+            </div>
+            <div class="box4">
+                <div>
+                    <h2>Notifications</h2>
+                </div>
+                <div>
+                    <p>Maintenance required for Mahindra Scorpio (Date: 2024-09-05)</p>
+                    <p>New reservation request from Udita Sinha (Date: 2024-09-01)</p>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Safar. All rights reserved. Contact us at safar912@gmail.com</p>
+    </footer>
+    <script src="manager.js"></script>
+</body>
+
+</html>
