@@ -38,8 +38,21 @@ This project is designed to allow users to book cars (with or without drivers), 
 
 
 ## 📷 Screenshots
+Customer(pca1)
+![image](https://github.com/user-attachments/assets/345b023f-c1e2-4800-922b-1ab5438c2628)
 
-_Add screenshots of different role dashboards here (optional)_
+Driver(sagar)
+![image](https://github.com/user-attachments/assets/565cfaf3-e18f-48cb-83ec-a7d3d81f0111)
+
+Owner(amit)
+![image](https://github.com/user-attachments/assets/ed4c971a-210e-4f70-af48-81afa798335e)
+
+manager(sujal car)
+![image](https://github.com/user-attachments/assets/3f284f1d-8ccd-45be-b616-b753be1e2d51)
+
+
+
+
 
 ## 🚀 How to Run
 
